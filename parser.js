@@ -1,7 +1,7 @@
 const parse = (fileData) => {
   const lines = fileData.split(/\r?\n/);
   var metadata = lines
-    .slice(2, 6)
+    .slice(0, 6)
     .map((line) => {
       line = line.split("\t");
       return JSON.parse('{"' + line[0] + '": ' + line[1] + "}");
@@ -21,5 +21,5 @@ const parse = (fileData) => {
 };
 
 module.exports = {
-  parse,
+  parse
 };

@@ -20,9 +20,9 @@ const logError = (message) => {
 const errorMessages = {
   invalidArguments: "Invalid arguments",
   fileNotFound: "Input file(s) not found",
-  parseError: "Parsing failed. Make sure they are in valid Esri ASCII format",
+  parseError: "Parsing failed. Make sure they are in valid Esri ASCII format"
 };
 
 module.exports = {
-  handleExit,
+  handleExit
 };
