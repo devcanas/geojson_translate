@@ -1,3 +1,5 @@
+var start = new Date().getTime();
+
 const fs = require("fs");
 const { argv } = require("process");
 
@@ -62,10 +64,15 @@ const processFileData = (riskFileData, uncertaintyFileData) => {
   const stringGeoJSON = stringify(geojson);
 
   fs.writeFile(
-    "geojson_translate_test/data/test.geojson",
+    "data/test.geojson",
     stringGeoJSON,
     (err, _) => {
-      console.log(err);
     }
   );
+
+  var end = new Date().getTime();
+  var time = end - start;
+  console.log("Done.")
+  console.log(time / 1000 + " seconds")
 };
+

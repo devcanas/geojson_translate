@@ -13,19 +13,19 @@ const projections = {
 
 const coordinateCalc = {
   lowerLeftCorner: {
-    cteX: 1,
-    cteY: 2
+    cteX: -1,
+    cteY: 0
   },
   lowerRightCorner: {
     cteX: 0,
-    cteY: 2
+    cteY: 0
   },
   topRightCorner: {
     cteX: 0,
     cteY: 1
   },
   topLeftCorner: {
-    cteX: 1,
+    cteX: -1,
     cteY: 1
   }
 };
