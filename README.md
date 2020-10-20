@@ -2,12 +2,43 @@
 
 Simple command to translate files in Esri ASCII format to GeoJSON
 
-## Installation
+## Downloads
 
 ---
 
-To run this tool you need to have node installed. Click [here](https://nodejs.org/en/download/) for the downloads page.
+You can find the executables for Windows, macOS and Linux [here](https://github.com/vicenteCancioCanas/geojson_translate/tree/master/distribution)
 
-## Format
+Instructions not available for Linux yet
 
-    node geojson_translate <path_to_risk_file> <path_to_uncertainty_file>
+## Setup
+
+1. Download the `geojson-translate-*` tool executable here for the platform you are using
+2. Save the executable wherever you want and save its path
+
+### Windows
+
+---
+
+3. Follow the instructions [here](https://docs.alfresco.com/4.2/tasks/fot-addpath.html) using the path you saved on the previous instruction
+
+### macOS
+
+---
+
+3.  Open ~/.zshrc or ~/.bash_profile and run the following command
+
+        export PATH=$PATH:<path_to_geojson-translate-macos>
+
+## Usage
+
+### Windows
+
+---
+
+    geojson-translate-win.exe path_to_etype.asc path_to_IQD.asc
+
+### macOS
+
+---
+
+    geojson-translate-macos path_to_etype.asc path_to_IQD.asc

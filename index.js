@@ -64,7 +64,7 @@ const processFileData = (riskFileData, uncertaintyFileData) => {
   const stringGeoJSON = stringify(geojson);
 
   fs.writeFile(
-    "data/test.geojson",
+    "out.geojson",
     stringGeoJSON,
     (err, _) => {
     }
