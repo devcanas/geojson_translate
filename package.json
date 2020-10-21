@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A tool to convert Esri ASCII format to GeoJSON. By default it will translate the coordinates into the WGS84 crs",
   "main": "index.js",
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vicenteCancioCanas/geojson_translate.git"
