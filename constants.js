@@ -1,6 +1,5 @@
 let geojsonTemplate = {
   type: "FeatureCollection",
-  name: "exampleJSon",
   crs: { type: "name", properties: { name: "urn:ogc:def:crs:EPSG::3763" } },
   features: []
 };

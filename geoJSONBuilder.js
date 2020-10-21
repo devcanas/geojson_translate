@@ -1,9 +1,10 @@
 const proj4 = require("proj4");
 const { K } = require("./constants");
 
-const build = (meta, riskData, uncertaintyData) => {
+const build = (name, meta, riskData, uncertaintyData) => {
   const { ncols, nrows, NODATA_value } = meta;
   let geojson = K.geojsonTemplate;
+  geojson.name = name;
   for (let row = 0; row < nrows; row++) {
     for (let col = 0; col < ncols; col++) {
       if (riskData[row][col] != NODATA_value) {

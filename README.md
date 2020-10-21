@@ -35,10 +35,10 @@ Instructions not available for Linux yet
 
 ---
 
-    geojson-translate-win.exe path_to_etype.asc path_to_IQD.asc
+    geojson-translate-win.exe path_to_etype.asc path_to_IQD.asc geojson_name
 
 ### macOS
 
 ---
 
-    geojson-translate-macos path_to_etype.asc path_to_IQD.asc
+    geojson-translate-macos path_to_etype.asc path_to_IQD.asc geojson_name
