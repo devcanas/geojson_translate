@@ -55,7 +55,9 @@ const buildCoordinate = (info, corner) => {
 };
 
 const convertToMapboxCRS = (coord) => {
-  return proj4(K.projections.source, K.projections.target, coord);
+  const { source, target } = K.projections;
+  const toNineDecimalPlaces = (num) => parseFloat(num.toFixed(9));
+  return proj4(source, target, coord).map(toNineDecimalPlaces);
 };
 
 module.exports = {
