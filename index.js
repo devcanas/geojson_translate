@@ -35,7 +35,7 @@ if (process.argv.length != 5) {
   process.exit(10);
 }
 
-const geojsonName = argv[4]
+const name = argv[4];
 const riskFile = argv[2];
 const uncertaintyFile = argv[3];
 
@@ -61,19 +61,18 @@ Promise.all([promiseForFile(riskFile), promiseForFile(uncertaintyFile)])
 const processFileData = (riskFileData, uncertaintyFileData) => {
   const riskData = parse(riskFileData);
   const uncertaintyData = parse(uncertaintyFileData);
-  const geojson = build(geojsonName, riskData.meta, riskData.data, uncertaintyData.data);
+  const geojson = build(
+    name,
+    riskData.meta,
+    riskData.data,
+    uncertaintyData.data
+  );
   const stringGeoJSON = stringify(geojson);
 
-  fs.writeFile(
-    "out.geojson",
-    stringGeoJSON,
-    (err, _) => {
-    }
-  );
+  fs.writeFile(`${name}.geojson`, stringGeoJSON, (err, _) => {});
 
   var end = new Date().getTime();
   var time = end - start;
-  console.log("Done.")
-  console.log(time / 1000 + " seconds")
+  console.log("Done.");
+  console.log(time / 1000 + " seconds");
 };
-
